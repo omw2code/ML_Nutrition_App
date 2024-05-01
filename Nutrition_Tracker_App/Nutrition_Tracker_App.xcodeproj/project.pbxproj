@@ -14,6 +14,7 @@
 		B25965302BE2AF50007AB8E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B259652F2BE2AF50007AB8E1 /* Assets.xcassets */; };
 		B25965332BE2AF50007AB8E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B25965322BE2AF50007AB8E1 /* Base */; };
 		B259653B2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B259653A2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel */; };
+		B2E3D4A42BE2BC8F00597EBE /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D4A32BE2BC8F00597EBE /* SetUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B25965322BE2AF50007AB8E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B25965342BE2AF50007AB8E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B259653A2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Nutrition_Food_Classifier.mlmodel; sourceTree = "<group>"; };
+		B2E3D4A32BE2BC8F00597EBE /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				B259652F2BE2AF50007AB8E1 /* Assets.xcassets */,
 				B25965312BE2AF50007AB8E1 /* LaunchScreen.storyboard */,
 				B25965342BE2AF50007AB8E1 /* Info.plist */,
+				B2E3D4A32BE2BC8F00597EBE /* SetUpViewController.swift */,
 			);
 			path = Nutrition_Tracker_App;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				B259652B2BE2AF44007AB8E1 /* ViewController.swift in Sources */,
 				B25965272BE2AF44007AB8E1 /* AppDelegate.swift in Sources */,
 				B25965292BE2AF44007AB8E1 /* SceneDelegate.swift in Sources */,
+				B2E3D4A42BE2BC8F00597EBE /* SetUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
