@@ -9,12 +9,17 @@ import UIKit
 import CoreML
 class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    @IBOutlet weak var intake_button: UIButton!
+    @IBOutlet weak var fats_label: UILabel!
+    @IBOutlet weak var protein_label: UILabel!
+    @IBOutlet weak var carbs_label: UILabel!
+    @IBOutlet weak var calories_label: UILabel!
     @IBOutlet weak var feature_label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
         
@@ -28,15 +33,7 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
         picker.delegate = self
         present(picker, animated: true)
     }
-    /*
-    // MARK: - Model Classification
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 //    private func analyze(image: UIImage?) {
 //        
@@ -65,43 +62,23 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
-//    func sceneLabel (forImage image:UIImage) -> String? {
-//        do {
-//            let config = MLModelConfiguration()
-//            let model = try Nutrition_Food_Classifier(configuration: config)
-//            if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image.cgImage!) {
-//                guard let scene = try? model.prediction(image: pixelBuffer) else {fatalError("Unexpected runtime error")}
-//                return scene.target
-//                
-//            }
-//        }
-//        catch {
-//            print(error.localizedDescription)
-//        }
-//        return nil
-//    }
-    
-    
-        func sceneLabel(forImage image: UIImage) -> String? {
-            guard let model = try? Nutrition_Food_Classifier(configuration: MLModelConfiguration()) else {
-                print("Failed to create ML model.")
-                return nil
-            }
-
-            guard let pixelBuffer = image.pixelBuffer(width: 224, height: 224) else {
-                print("Failed to convert UIImage to CVPixelBuffer.")
-                return nil
-            }
-
-            do {
-                let input = Nutrition_Food_ClassifierInput(image: pixelBuffer)
-                let output = try model.prediction(input: input)
-                return output.target
-            } catch {
-                print("Error during prediction: \(error.localizedDescription)")
-                return nil
+    func sceneLabel (forImage image:UIImage) -> String? {
+        do {
+            let config = MLModelConfiguration()
+            let model = try Nutrition_Food_Classifier(configuration: config)
+            if let pixelBuffer = ImageProcessor.pixelBuffer(forImage: image.cgImage!) {
+                guard let scene = try? model.prediction(image: pixelBuffer) else {fatalError("Unexpected runtime error")}
+                return scene.target
+                
             }
         }
+        catch {
+            print(error.localizedDescription)
+        }
+        return nil
+    }
+    
+    
     
     
     
@@ -118,7 +95,20 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
         }
         imageView.image = image
         if let sceneLabelString = sceneLabel(forImage: image) {
-                        feature_label.text = sceneLabelString
+            if let foundFood = FoodDatabase.findFood(byName: sceneLabelString) {
+                feature_label.text = foundFood.name
+                
+                let carbs = foundFood.macros["carbs"] ?? 0.0
+                let protein = foundFood.macros["protein"] ?? 0.0
+                let fat = foundFood.macros["fat"] ?? 0.0
+                
+                carbs_label.text = "Carbs: \(carbs)g"
+                protein_label.text = "Protein: \(protein)g"
+                fats_label.text = "Fats: \(fat)g"
+                calories_label.text = String(foundFood.calories)
+            } else {
+                print("Food not found in database")
+            }
                     }
         //analyze(image: image)
     }

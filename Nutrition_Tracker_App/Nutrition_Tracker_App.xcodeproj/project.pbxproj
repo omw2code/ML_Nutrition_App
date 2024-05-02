@@ -10,7 +10,7 @@
 		B23834F02BE2D925005CF2B7 /* ImageIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834EF2BE2D925005CF2B7 /* ImageIDViewController.swift */; };
 		B23834F22BE2DC4E005CF2B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F12BE2DC4E005CF2B7 /* Extensions.swift */; };
 		B23834F42BE2E767005CF2B7 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F32BE2E767005CF2B7 /* ImageProcessor.swift */; };
-		B23834F62BE3FF24005CF2B7 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F52BE3FF24005CF2B7 /* ChartViewController.swift */; };
+		B23834F62BE3FF24005CF2B7 /* GoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F52BE3FF24005CF2B7 /* GoalViewController.swift */; };
 		B25965272BE2AF44007AB8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25965262BE2AF44007AB8E1 /* AppDelegate.swift */; };
 		B25965292BE2AF44007AB8E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25965282BE2AF44007AB8E1 /* SceneDelegate.swift */; };
 		B259652B2BE2AF44007AB8E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259652A2BE2AF44007AB8E1 /* ViewController.swift */; };
@@ -18,14 +18,20 @@
 		B25965302BE2AF50007AB8E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B259652F2BE2AF50007AB8E1 /* Assets.xcassets */; };
 		B25965332BE2AF50007AB8E1 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B25965322BE2AF50007AB8E1 /* Base */; };
 		B259653B2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = B259653A2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel */; };
+		B2613EEC2BE41BCF00702A2D /* FoodDatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2613EEB2BE41BCF00702A2D /* FoodDatabase.swift */; };
+		B2613EEE2BE4272600702A2D /* DailyIntakeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2613EED2BE4272600702A2D /* DailyIntakeViewController.swift */; };
+		B2613EF02BE42B2B00702A2D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2613EEF2BE42B2B00702A2D /* User.swift */; };
 		B2E3D4A42BE2BC8F00597EBE /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2E3D4A32BE2BC8F00597EBE /* SetUpViewController.swift */; };
+		C41CEB19D251DBE24D5CA4F8 /* Pods_Nutrition_Tracker_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3554FD5FD6C5AB887534C02B /* Pods_Nutrition_Tracker_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3554FD5FD6C5AB887534C02B /* Pods_Nutrition_Tracker_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrition_Tracker_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E0A2762B34B8A66DF268317 /* Pods-Nutrition_Tracker_App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition_Tracker_App.debug.xcconfig"; path = "Target Support Files/Pods-Nutrition_Tracker_App/Pods-Nutrition_Tracker_App.debug.xcconfig"; sourceTree = "<group>"; };
 		B23834EF2BE2D925005CF2B7 /* ImageIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIDViewController.swift; sourceTree = "<group>"; };
 		B23834F12BE2DC4E005CF2B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B23834F32BE2E767005CF2B7 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
-		B23834F52BE3FF24005CF2B7 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
+		B23834F52BE3FF24005CF2B7 /* GoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalViewController.swift; sourceTree = "<group>"; };
 		B25965232BE2AF44007AB8E1 /* Nutrition_Tracker_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrition_Tracker_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25965262BE2AF44007AB8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B25965282BE2AF44007AB8E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +41,11 @@
 		B25965322BE2AF50007AB8E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B25965342BE2AF50007AB8E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B259653A2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Nutrition_Food_Classifier.mlmodel; sourceTree = "<group>"; };
+		B2613EEB2BE41BCF00702A2D /* FoodDatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodDatabase.swift; sourceTree = "<group>"; };
+		B2613EED2BE4272600702A2D /* DailyIntakeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyIntakeViewController.swift; sourceTree = "<group>"; };
+		B2613EEF2BE42B2B00702A2D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B2E3D4A32BE2BC8F00597EBE /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		CCB2C4CC9DFA885A987A409E /* Pods-Nutrition_Tracker_App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition_Tracker_App.release.xcconfig"; path = "Target Support Files/Pods-Nutrition_Tracker_App/Pods-Nutrition_Tracker_App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +53,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C41CEB19D251DBE24D5CA4F8 /* Pods_Nutrition_Tracker_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6EE287CC898207261EEC9E01 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3554FD5FD6C5AB887534C02B /* Pods_Nutrition_Tracker_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B259651A2BE2AF44007AB8E1 = {
 			isa = PBXGroup;
 			children = (
 				B25965252BE2AF44007AB8E1 /* Nutrition_Tracker_App */,
 				B25965242BE2AF44007AB8E1 /* Products */,
+				E09B160862B142D3724AFA96 /* Pods */,
+				6EE287CC898207261EEC9E01 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -80,9 +101,21 @@
 				B23834EF2BE2D925005CF2B7 /* ImageIDViewController.swift */,
 				B23834F12BE2DC4E005CF2B7 /* Extensions.swift */,
 				B23834F32BE2E767005CF2B7 /* ImageProcessor.swift */,
-				B23834F52BE3FF24005CF2B7 /* ChartViewController.swift */,
+				B23834F52BE3FF24005CF2B7 /* GoalViewController.swift */,
+				B2613EEB2BE41BCF00702A2D /* FoodDatabase.swift */,
+				B2613EED2BE4272600702A2D /* DailyIntakeViewController.swift */,
+				B2613EEF2BE42B2B00702A2D /* User.swift */,
 			);
 			path = Nutrition_Tracker_App;
+			sourceTree = "<group>";
+		};
+		E09B160862B142D3724AFA96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6E0A2762B34B8A66DF268317 /* Pods-Nutrition_Tracker_App.debug.xcconfig */,
+				CCB2C4CC9DFA885A987A409E /* Pods-Nutrition_Tracker_App.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,9 +125,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B25965372BE2AF50007AB8E1 /* Build configuration list for PBXNativeTarget "Nutrition_Tracker_App" */;
 			buildPhases = (
+				E683F76860CF2A01BA938A33 /* [CP] Check Pods Manifest.lock */,
 				B259651F2BE2AF44007AB8E1 /* Sources */,
 				B25965202BE2AF44007AB8E1 /* Frameworks */,
 				B25965212BE2AF44007AB8E1 /* Resources */,
+				0DD91E65303158D45CFC5CF3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -151,6 +186,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0DD91E65303158D45CFC5CF3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrition_Tracker_App/Pods-Nutrition_Tracker_App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrition_Tracker_App/Pods-Nutrition_Tracker_App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nutrition_Tracker_App/Pods-Nutrition_Tracker_App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E683F76860CF2A01BA938A33 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Nutrition_Tracker_App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B259651F2BE2AF44007AB8E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -161,9 +238,12 @@
 				B23834F42BE2E767005CF2B7 /* ImageProcessor.swift in Sources */,
 				B25965272BE2AF44007AB8E1 /* AppDelegate.swift in Sources */,
 				B25965292BE2AF44007AB8E1 /* SceneDelegate.swift in Sources */,
-				B23834F62BE3FF24005CF2B7 /* ChartViewController.swift in Sources */,
+				B23834F62BE3FF24005CF2B7 /* GoalViewController.swift in Sources */,
 				B2E3D4A42BE2BC8F00597EBE /* SetUpViewController.swift in Sources */,
+				B2613EEE2BE4272600702A2D /* DailyIntakeViewController.swift in Sources */,
+				B2613EF02BE42B2B00702A2D /* User.swift in Sources */,
 				B23834F02BE2D925005CF2B7 /* ImageIDViewController.swift in Sources */,
+				B2613EEC2BE41BCF00702A2D /* FoodDatabase.swift in Sources */,
 				B23834F22BE2DC4E005CF2B7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -227,7 +307,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -290,7 +370,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -311,6 +391,7 @@
 		};
 		B25965382BE2AF50007AB8E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E0A2762B34B8A66DF268317 /* Pods-Nutrition_Tracker_App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -338,6 +419,7 @@
 		};
 		B25965392BE2AF50007AB8E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCB2C4CC9DFA885A987A409E /* Pods-Nutrition_Tracker_App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

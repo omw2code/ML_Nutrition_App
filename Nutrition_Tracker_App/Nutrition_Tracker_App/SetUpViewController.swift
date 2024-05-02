@@ -9,6 +9,9 @@ import UIKit
 
 class SetUpViewController: UIViewController {
     // MARK: - Public Var's
+    @IBOutlet weak var age_tf: UITextField!
+    @IBOutlet weak var female_button: UIButton!
+    @IBOutlet weak var male_button: UIButton!
     @IBOutlet weak var continue_button: UIButton!
     @IBOutlet weak var maintain_button: UIButton!
     @IBOutlet weak var lose_button: UIButton!
@@ -18,6 +21,9 @@ class SetUpViewController: UIViewController {
     @IBOutlet weak var gain_imageview: UIImageView!
     @IBOutlet weak var weight_tf: UITextField!
     @IBOutlet weak var height_tf: UITextField!
+    
+    //temp user for testing
+//    User.currentUser = User(height: 0, weight: 0, age: 0, gender: .male, goal: .loseWeight, calories: 0)
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
@@ -69,6 +75,7 @@ class SetUpViewController: UIViewController {
             return
         }
         gain_imageview.image = image
+        User.shared.setGoal(.gainWeight)
     }
     
     @IBAction func loseButton_clicked(_ sender: Any) {
@@ -82,6 +89,7 @@ class SetUpViewController: UIViewController {
             return
         }
         lose_imageview.image = image
+        User.shared.setGoal(.loseWeight)
         
     }
     @IBAction func maintainButton_clicked(_ sender: Any) {
@@ -95,13 +103,64 @@ class SetUpViewController: UIViewController {
             return
         }
         maintain_imageview.image = image
+        User.shared.setGoal(.maintainWeight)
     }
     
+    
+    @IBAction func maleButton_clicked(_ sender: Any) {
+        male_button.tintColor = UIColor.link
+        female_button.tintColor = UIColor.opaqueSeparator
+        User.shared.setGender(.male)
+    }
+    
+    @IBAction func femaleButton_clicked(_ sender: Any) {
+        female_button.tintColor = UIColor.link
+        male_button.tintColor = UIColor.opaqueSeparator
+        User.shared.setGender(.female)
+    }
+    
+    
+    
+    
+    
     @IBAction func continueButton_clicked(_ sender: Any) {
+        
+        if let heightText = height_tf.text,
+           let heightInInches = convertHeightToInches(from: heightText),
+           let weightText = weight_tf.text,
+           let weight = Double(weightText),
+           let ageText = age_tf.text,
+           let age = Int(ageText) {
+            User.shared.setHeight(Int(heightInInches))
+            User.shared.setWeight(Int(weight))
+            User.shared.setAge(age)
+            User.shared.calculateBMR()
+            User.shared.calculateMacronutrientDistribution(calorieGoal: Double(User.shared.calories))
+        } else {
+            // Display an alert or error message to inform the user about the invalid input
+            print("Please enter valid height, weight, and age.")
+        }
         //perform segue
-        let viewController = self.storyboard?.instantiateViewController(identifier: "image_identifier") as! ImageIDViewController
+        let viewController = self.storyboard?.instantiateViewController(identifier: "testID") as! UITabBarController
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overFullScreen
         self.present(viewController, animated: true, completion: nil)
     }
+    
+    func convertHeightToInches(from heightString: String) -> Double? {
+        // Split the height string into feet and inches parts
+        let components = heightString.components(separatedBy: "'")
+        
+        // Ensure there are two components (feet and inches)
+        guard components.count == 2 else { return nil }
+        
+        // Convert feet and inches strings to integers
+        guard let feet = Double(components[0]), let inches = Double(components[1]) else { return nil }
+        
+        // Convert feet and inches to inches
+        let heightInInches = (feet * 12) + inches
+        
+        return heightInInches
+    }
+
 }
