@@ -138,41 +138,50 @@
             </objects>
             <point key="canvasLocation" x="48" y="-2"/>
         </scene>
-        <!--Item 2-->
+        <!--Chart View Controller-->
         <scene sceneID="bwv-Xa-B8o">
             <objects>
-                <viewController id="GUy-Nb-3l7" sceneMemberID="viewController">
+                <viewController id="GUy-Nb-3l7" customClass="ChartViewController" customModule="Nutrition_Tracker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6IC-Gp-To1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="r5c-e4-A7P"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="F08-i2-0n3"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="chart.xyaxis.line" catalog="system" id="F08-i2-0n3"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cC-KO-Zd8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2033" y="301"/>
         </scene>
-        <!--Item 1-->
+        <!--ImageID View Controller-->
         <scene sceneID="9De-QR-4t5">
             <objects>
-                <viewController id="f4s-Pc-u1c" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="image_identifier" id="f4s-Pc-u1c" customClass="ImageIDViewController" customModule="Nutrition_Tracker_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BIM-Fj-I2F">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iSs-QI-4Vw">
-                                <rect key="frame" x="139" y="309" width="114" height="145"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ps0-3I-tTB">
+                                <rect key="frame" x="16" y="105" width="361" height="368"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                            </button>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bog-G2-5nP">
+                                <rect key="frame" x="175" y="520" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="H9j-DR-p1g"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="8JN-oD-kzF"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="magnifyingglass.circle" catalog="system" id="8JN-oD-kzF"/>
+                    <connections>
+                        <outlet property="feature_label" destination="bog-G2-5nP" id="EHt-iP-scg"/>
+                        <outlet property="imageView" destination="Ps0-3I-tTB" id="Ry5-g0-1Ss"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RgW-mQ-FkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,7 +210,10 @@
         <image name="chart.line.downtrend.xyaxis.circle" catalog="system" width="128" height="123"/>
         <image name="chart.line.flattrend.xyaxis.circle" catalog="system" width="128" height="123"/>
         <image name="chart.line.uptrend.xyaxis.circle" catalog="system" width="128" height="123"/>
+        <image name="chart.xyaxis.line" catalog="system" width="128" height="102"/>
         <image name="fork.knife.circle.fill" catalog="system" width="128" height="123"/>
+        <image name="magnifyingglass.circle" catalog="system" width="128" height="123"/>
+        <image name="photo" catalog="system" width="128" height="93"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

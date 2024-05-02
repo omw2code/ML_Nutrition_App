@@ -99,7 +99,7 @@ class SetUpViewController: UIViewController {
     
     @IBAction func continueButton_clicked(_ sender: Any) {
         //perform segue
-        let viewController = self.storyboard?.instantiateViewController(identifier: "accountSetUp_ID") as! FraternitySororitySelectViewController
+        let viewController = self.storyboard?.instantiateViewController(identifier: "image_identifier") as! ImageIDViewController
         viewController.modalTransitionStyle = .crossDissolve
         viewController.modalPresentationStyle = .overFullScreen
         self.present(viewController, animated: true, completion: nil)

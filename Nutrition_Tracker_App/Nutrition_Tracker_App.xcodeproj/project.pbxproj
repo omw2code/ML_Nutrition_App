@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B23834F02BE2D925005CF2B7 /* ImageIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834EF2BE2D925005CF2B7 /* ImageIDViewController.swift */; };
+		B23834F22BE2DC4E005CF2B7 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F12BE2DC4E005CF2B7 /* Extensions.swift */; };
+		B23834F42BE2E767005CF2B7 /* ImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F32BE2E767005CF2B7 /* ImageProcessor.swift */; };
+		B23834F62BE3FF24005CF2B7 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B23834F52BE3FF24005CF2B7 /* ChartViewController.swift */; };
 		B25965272BE2AF44007AB8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25965262BE2AF44007AB8E1 /* AppDelegate.swift */; };
 		B25965292BE2AF44007AB8E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25965282BE2AF44007AB8E1 /* SceneDelegate.swift */; };
 		B259652B2BE2AF44007AB8E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B259652A2BE2AF44007AB8E1 /* ViewController.swift */; };
@@ -18,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B23834EF2BE2D925005CF2B7 /* ImageIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageIDViewController.swift; sourceTree = "<group>"; };
+		B23834F12BE2DC4E005CF2B7 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		B23834F32BE2E767005CF2B7 /* ImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageProcessor.swift; sourceTree = "<group>"; };
+		B23834F52BE3FF24005CF2B7 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		B25965232BE2AF44007AB8E1 /* Nutrition_Tracker_App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nutrition_Tracker_App.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B25965262BE2AF44007AB8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B25965282BE2AF44007AB8E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +77,10 @@
 				B25965312BE2AF50007AB8E1 /* LaunchScreen.storyboard */,
 				B25965342BE2AF50007AB8E1 /* Info.plist */,
 				B2E3D4A32BE2BC8F00597EBE /* SetUpViewController.swift */,
+				B23834EF2BE2D925005CF2B7 /* ImageIDViewController.swift */,
+				B23834F12BE2DC4E005CF2B7 /* Extensions.swift */,
+				B23834F32BE2E767005CF2B7 /* ImageProcessor.swift */,
+				B23834F52BE3FF24005CF2B7 /* ChartViewController.swift */,
 			);
 			path = Nutrition_Tracker_App;
 			sourceTree = "<group>";
@@ -146,9 +158,13 @@
 			files = (
 				B259653B2BE2AFA7007AB8E1 /* Nutrition_Food_Classifier.mlmodel in Sources */,
 				B259652B2BE2AF44007AB8E1 /* ViewController.swift in Sources */,
+				B23834F42BE2E767005CF2B7 /* ImageProcessor.swift in Sources */,
 				B25965272BE2AF44007AB8E1 /* AppDelegate.swift in Sources */,
 				B25965292BE2AF44007AB8E1 /* SceneDelegate.swift in Sources */,
+				B23834F62BE3FF24005CF2B7 /* ChartViewController.swift in Sources */,
 				B2E3D4A42BE2BC8F00597EBE /* SetUpViewController.swift in Sources */,
+				B23834F02BE2D925005CF2B7 /* ImageIDViewController.swift in Sources */,
+				B23834F22BE2DC4E005CF2B7 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
