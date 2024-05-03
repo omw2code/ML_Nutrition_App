@@ -8,7 +8,9 @@
 import UIKit
 import CoreML
 class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
+    
+    //MARK: - UI Components
+    @IBOutlet weak var itemCount_textField: UITextField!
     @IBOutlet weak var intake_button: UIButton!
     @IBOutlet weak var fats_label: UILabel!
     @IBOutlet weak var protein_label: UILabel!
@@ -87,7 +89,7 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     
     
-    //Image
+    //MARK: - Image Picker
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
         picker.dismiss(animated: true, completion: nil)
     }
@@ -120,7 +122,13 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
                     }
         //analyze(image: image)
     }
+    //MARK: - Button Implementations
     @IBAction func intakeButton_clicked(_ sender: Any) {
             User.shared.addToDailyIntake(cal: calories, carb: carbs, protein: protein, fats: fats)
+    }
+    @IBAction func stepper_clicked(_ sender: UIStepper) {
+        let temp = Int(itemCount_textField.text ?? "")
+        
+        itemCount_textField.text = String(Int(sender.value) + (temp ?? 1))
     }
 }

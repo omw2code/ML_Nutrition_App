@@ -9,7 +9,10 @@ import UIKit
 
 class GoalViewController: UIViewController, ChartViewDelegate {
     
-
+    // MARK: - UI Component variables
+    @IBOutlet weak var lastThirty_button: UIButton!
+    @IBOutlet weak var lastSeven_button: UIButton!
+    @IBOutlet weak var allTime_button: UIButton!
     var lineChart = LineChartView()
     
     override func viewDidLoad() {
@@ -24,6 +27,7 @@ class GoalViewController: UIViewController, ChartViewDelegate {
         lineChart.animate(xAxisDuration: 1.0, yAxisDuration: 1.0)
     }
     
+    // MARK: - Graph Implementation
     override func viewDidLayoutSubviews() {
         lineChart.clear()
         lineChart.frame = CGRect(x: 0, y: 0,
@@ -33,7 +37,7 @@ class GoalViewController: UIViewController, ChartViewDelegate {
         view.addSubview(lineChart)
 
         for _ in 0..<10 {
-            // Randomly generate a weight change between -2 and 2 pounds
+            //generate a weight change between -2 and 2 pounds
             let weightChange = Int.random(in: -2...2)
             
 
@@ -52,7 +56,7 @@ class GoalViewController: UIViewController, ChartViewDelegate {
         }
         
         let set = LineChartDataSet(entries: entries)
-        set.colors = ChartColorTemplates.material()
+        set.colors = ChartColorTemplates.pastel()
         
         let data = LineChartData(dataSet: set)
         

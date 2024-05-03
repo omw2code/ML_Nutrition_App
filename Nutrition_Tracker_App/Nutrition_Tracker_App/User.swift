@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+// MARK: - ENUM's
 enum Gender {
     case male
     case female
@@ -18,6 +18,7 @@ enum Goal {
     case maintainWeight
 }
 
+// MARK: - User Class
 class User {
     static let shared = User()
     
@@ -64,14 +65,15 @@ class User {
     func setCalories(_ calories: Int) {
         self.calories = calories
     }
-
+    
+    //MARK: - Personal Macro, calorie, daily intake Implementations (possibly move this to its own class)
     func calculateBMR() {
         var bmr: Double
         
-        // Convert weight from pounds to kilograms
+        //weight from pounds to kilograms
         let weightInKilograms = Double(weight) * 0.453592
         
-        // Convert height from inches to centimeters
+        //height from inches to centimeters
         let heightInCentimeters = Double(height) * 2.54
         
         switch gender {

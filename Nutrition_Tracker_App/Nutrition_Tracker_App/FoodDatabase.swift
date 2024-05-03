@@ -52,12 +52,12 @@ class FoodDatabase {
     ]
     
     static func findFood(byName name: String) -> Food? {
-        // Search for the food by its name
+        //find food by its name
         for food in foods {
             if food.name.lowercased() == name.lowercased() {
                 return food
             }
         }
-        return nil // Return nil if the food is not found
+        return nil
     }
 }

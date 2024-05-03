@@ -146,6 +146,8 @@ class SetUpViewController: UIViewController {
         self.present(viewController, animated: true, completion: nil)
     }
     
+    
+    //MARK: - Utils
     func convertHeightToInches(from heightString: String) -> Double? {
 
         let components = heightString.components(separatedBy: "'")

@@ -32,6 +32,7 @@ class DailyIntakeViewController: UIViewController, ChartViewDelegate {
         updateData()
     }
     
+    // MARK: - Graph and ProgressBar
     func updateData() {
 
         calorieCount_label.text = " \(User.shared.currCalCount)/\(User.shared.calories) Calories"
