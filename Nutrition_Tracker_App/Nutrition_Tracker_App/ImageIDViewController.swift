@@ -17,10 +17,14 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var feature_label: UILabel!
     @IBOutlet weak var imageView: UIImageView!
     
+    var carbs: Int = 0
+    var protein: Int = 0
+    var fats: Int = 0
+    var calories: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        intake_button.isEnabled = false
         let tap = UITapGestureRecognizer(target: self, action: #selector(didTapImage))
         
         tap.numberOfTapsRequired = 1
@@ -98,18 +102,25 @@ class ImageIDViewController: UIViewController, UIImagePickerControllerDelegate, 
             if let foundFood = FoodDatabase.findFood(byName: sceneLabelString) {
                 feature_label.text = foundFood.name
                 
-                let carbs = foundFood.macros["carbs"] ?? 0.0
-                let protein = foundFood.macros["protein"] ?? 0.0
-                let fat = foundFood.macros["fat"] ?? 0.0
+                carbs = Int(foundFood.macros["carbs"] ?? 0.0)
+                protein = Int(foundFood.macros["protein"] ?? 0.0)
+                fats = Int(foundFood.macros["fat"] ?? 0.0)
+                calories = Int(foundFood.calories)
                 
                 carbs_label.text = "Carbs: \(carbs)g"
                 protein_label.text = "Protein: \(protein)g"
-                fats_label.text = "Fats: \(fat)g"
+                fats_label.text = "Fats: \(fats)g"
                 calories_label.text = String(foundFood.calories)
+                intake_button.isEnabled = true
+                
+                
             } else {
                 print("Food not found in database")
             }
                     }
         //analyze(image: image)
+    }
+    @IBAction func intakeButton_clicked(_ sender: Any) {
+            User.shared.addToDailyIntake(cal: calories, carb: carbs, protein: protein, fats: fats)
     }
 }

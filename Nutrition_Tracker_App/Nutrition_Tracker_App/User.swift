@@ -23,15 +23,21 @@ class User {
     
     private(set) var height: Int = 0
     private(set) var weight: Int = 0
+    private(set) var weightHistory: [Int] = []
     private(set) var age: Int = 0
     private(set) var gender: Gender = .male
     private(set) var goal: Goal = .loseWeight
     private(set) var calories: Int = 0
     
-    private(set) var remainingCarbs: Int = 0
-    private(set) var remainingProtein: Int = 0
-    private(set) var remainingFats: Int = 0
-
+    private(set) var totCarbs: Int = 0
+    private(set) var totProtein: Int = 0
+    private(set) var totFats: Int = 0
+    
+    private(set) var currCalCount: Int = 0
+    private(set) var currCarbCount: Int = 0
+    private(set) var currProteinCount: Int = 0
+    private(set) var currFatsCount: Int = 0
+    
     private init() {}
 
     func setHeight(_ height: Int) {
@@ -40,6 +46,7 @@ class User {
 
     func setWeight(_ weight: Int) {
         self.weight = weight
+        self.weightHistory.append(weight)
     }
 
     func setAge(_ age: Int) {
@@ -80,7 +87,7 @@ class User {
     func adjustCaloriesForGoal(bmr: Double) -> Double {
         switch goal {
         case .gainWeight:
-            return bmr + 500
+            return bmr + 600
         case .loseWeight:
             return bmr - 500
         case .maintainWeight:
@@ -89,21 +96,34 @@ class User {
     }
     
     func calculateMacronutrientDistribution(calorieGoal: Double) {
-        // Determine macronutrient distribution percentages (you can adjust these percentages based on guidelines)
+
         let carbsPercentage: Double = 50
         let proteinPercentage: Double = 25
         let fatsPercentage: Double = 25
         
-        // Calculate calories from each macronutrient
+
         let carbsCalories = calorieGoal * (carbsPercentage / 100)
         let proteinCalories = calorieGoal * (proteinPercentage / 100)
         let fatsCalories = calorieGoal * (fatsPercentage / 100)
         
-        // Convert calories to grams (4 calories per gram for carbs and protein, 9 calories per gram for fats)
-        self.remainingCarbs = Int(carbsCalories / 4)
-        self.remainingProtein = Int(proteinCalories / 4)
-        self.remainingFats = Int(fatsCalories / 9)
+
+        self.totCarbs = Int(carbsCalories / 4)
+        self.totProtein = Int(proteinCalories / 4)
+        self.totFats = Int(fatsCalories / 9)
         
-        
+    }
+    
+    func addToDailyIntake(cal: Int, carb: Int, protein: Int, fats: Int) {
+        self.currCalCount += cal
+        self.currCarbCount += carb
+        self.currProteinCount += protein
+        self.currFatsCount += fats
+    }
+    
+    func resetDailyIntake() {
+        self.currCalCount = 0
+        self.currCarbCount = 0
+        self.currFatsCount = 0
+        self.currProteinCount = 0
     }
 }

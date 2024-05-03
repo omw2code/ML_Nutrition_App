@@ -9,7 +9,7 @@ import Foundation
 
 class Food {
     let name: String
-    let macros: [String: Double] // Assuming macros are stored as key-value pairs
+    let macros: [String: Double] 
     let calories: Double
 
     init(name: String, macros: [String: Double], calories: Double) {

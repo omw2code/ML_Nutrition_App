@@ -124,7 +124,6 @@ class SetUpViewController: UIViewController {
     
     
     @IBAction func continueButton_clicked(_ sender: Any) {
-        
         if let heightText = height_tf.text,
            let heightInInches = convertHeightToInches(from: heightText),
            let weightText = weight_tf.text,
@@ -148,16 +147,16 @@ class SetUpViewController: UIViewController {
     }
     
     func convertHeightToInches(from heightString: String) -> Double? {
-        // Split the height string into feet and inches parts
+
         let components = heightString.components(separatedBy: "'")
         
-        // Ensure there are two components (feet and inches)
+
         guard components.count == 2 else { return nil }
         
-        // Convert feet and inches strings to integers
+
         guard let feet = Double(components[0]), let inches = Double(components[1]) else { return nil }
         
-        // Convert feet and inches to inches
+
         let heightInInches = (feet * 12) + inches
         
         return heightInInches
