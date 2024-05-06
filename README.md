@@ -28,6 +28,7 @@ To install Nutrition Tracker, follow these steps:
 
 ## Demo
 ![Demo_ML_2_gif](https://github.com/omw2code/ML_Nutrition_App/assets/142350438/cb704220-216e-4a41-ba4f-b1941ffad651)
+<img width="1135" alt="Screenshot 2024-05-06 at 9 56 18 AM" src="https://github.com/omw2code/ML_Nutrition_App/assets/142350438/c8d2f64a-e9b5-44c5-a646-2736e611be3d">
 
 
 
