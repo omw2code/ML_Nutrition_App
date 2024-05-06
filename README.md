@@ -27,7 +27,8 @@ To install Nutrition Tracker, follow these steps:
 6. **View History**: Track your dietary habits over time.
 
 ## Demo
-![Demo_ML_gif](https://github.com/omw2code/ML_Nutrition_App/assets/142350438/707d9b4a-d7c5-4d44-b2a5-816a9c3f680a)
+![Demo_ML_2_gif](https://github.com/omw2code/ML_Nutrition_App/assets/142350438/cb704220-216e-4a41-ba4f-b1941ffad651)
+
 
 
 ## Support
