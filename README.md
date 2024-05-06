@@ -14,7 +14,7 @@ Nutrition Tracker is a food tracking application designed to help users keep tra
 
 ## Installation
 To install Nutrition Tracker, follow these steps:
-1. Clone the repository to your local machine: `git clone [repository URL]`
+1. Clone the repository to your local machine: `[git clone [repository URL]](https://github.com/omw2code/ML_Nutrition_App.git)`
 2. Open the project in Xcode (version 15.3) and have cocoapods installed.
 4. Build and run the project on a simulator or a physical device running iOS.
 
