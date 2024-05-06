@@ -3,7 +3,7 @@
 # Food Tracking App using Swift and Apple's Core ML Framework
 
 ## Description
-Nutrition Tracker is a food tracking application designed to help users keep track of their dietary intake. Leveraging Apple's Core ML framework, the app utilizes image recognition algorithms to identify and analyze food items from images captured by the user's device camera or camera roll. The README provides an overview of the app's features, installation instructions, and usage guidelines.
+Nutrition Tracker is a food tracking application designed to help users keep track of their dietary intake. Using Apple's Core ML framework, the app utilizes image recognition algorithms to identify and analyze food items from images captured by the user's camera or camera roll. The README provides an overview of the app's features, installation instructions, and usage.
 
 ## Features
 - **Image Recognition**: Utilizes Core ML to recognize and classify food items from images.
