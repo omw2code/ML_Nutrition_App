@@ -45,7 +45,7 @@ class GoalViewController: UIViewController, ChartViewDelegate {
             let newWeight = max(0, previousWeight + weightChange) 
             User.shared.setWeight(newWeight)
         }
-        
+        User.shared.setWeight(154)
         let weightHistory = User.shared.weightHistory
         
         var entries = [ChartDataEntry]()
