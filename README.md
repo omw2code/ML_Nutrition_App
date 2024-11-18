@@ -1,4 +1,4 @@
-# ML_Nutrition_App
+# AI Nutition Tracker
 
 # Food Tracking App using Swift and Apple's Core ML Framework
 
